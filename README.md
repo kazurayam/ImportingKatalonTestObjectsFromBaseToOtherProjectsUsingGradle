@@ -15,7 +15,7 @@ I would enumerate what's required, as follows:
 1. In our team, we have 3 persons: Guru, Tester1 and Tester2.
 2. We have 3 Katalon Studio projects: Base, ProjectA and ProjectB.
 3. Guru develops the Base project, Tester1 develops the ProjectA, Tester2 develops the ProjectB.
-4. In the Base project, Guru develops a set of reusable TestObjects, which is inteded to by used by Tester1 and Tester2
+4. In the Base project, Guru develops a set of reusable TestObjects, which is intended to be used by Tester1 and Tester2
 5. In the ProjectA, Tester1 develops a set of TestObjects, which is local to the ProjectA. And at the same time, Tester1 wants to use some TestObjects developed by Guru in the Base project.
 6. In the ProjectB, Tester2 develops a set of TestObjects, which is local to the ProjectB. And at the same time, Tester2 wants to use some TestObjects developed by Guru in the Base project.
 7. Test1 and Test2 do not need all the TestObjects developt by Guru in the Base project. Test1 wants to select some of the TestObjects out of the Base project.
