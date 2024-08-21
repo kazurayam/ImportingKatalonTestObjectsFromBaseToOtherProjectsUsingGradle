@@ -39,7 +39,7 @@ Tester1 has developed the ProjectA. In the ProjectA's "Object Repository" folder
 
 Now, let me assume that Tester1 performs a magic here!!!
 
-After the magic, I can find 2 subfolers.
+After the magic, I can find 2 subfolers under the "Object Repository".
 
 ![03](https://kazurayam.github.io/ImportingTestObjectsAcrossKatalonProjectsUsingGradle/images/03ProjectA_after_import.png)
 
@@ -47,24 +47,77 @@ The "Page_CURA Healthcare Service" and its componet TestObjects have been import
 
 ## Solution
 
-I would use [Gradle](https://gradle.org/) build tool. In the ProjectA and ProjectB, I will create `build.gradle` file which implements a custom task `importTestObjectsFromBase`. And Tester1 runs a command in the Terminal:
+I would use [Gradle](https://gradle.org/) build tool. Tester1 and Tester2 need to prepare environment on their machines.
+
+1. They need to install Java
+2. They need to install Gradle
+
+See the doc [Installing Gradle](https://docs.gradle.org/current/userguide/installation.html#installation)
+
+## Description
+
+Tester1 wants to execute the following command on his machine in the commandline:
+
+```
+$ cd <ProjectA root folder>
+$ gradle init
+Select type of project to generate:
+  1: basic
+  2: application
+  3: library
+  4: Gradle plugin
+Enter selection (default: basic) [1..4] 1
+
+Select build script DSL:
+  1: Kotlin
+  2: Groovy
+Enter selection (default: Kotlin) [1..2] 2
+
+Project name (default: ProjectA): ProjectA
+Generate build using new APIs and behavior (some features may change in the next minor release)? (default: no) [yes, no] no
+
+
+> Task :init
+To learn more about Gradle by exploring our Samples at https://docs.gradle.org/8.5/samples
+
+BUILD SUCCESSFUL in 17s
+2 actionable tasks: 2 executed
+```
+
+By this command, Tester1 will find the following files/folders are created
+
+```
+$ tree -L 1 .
+.
+├── build.gradle
+├── gradle/
+├── gradlew
+├── gradlew.bat
+└── settings.gradle
+```
+
+These files are required.
+
+Tester1 wants to edit the `build.gradle` file. See the following code:
+
+- [ProjectA/build.gradle](https://github.com/kazurayam/ImportingTestObjectsAcrossKatalonProjectsUsingGradle/blob/master/ProjectA/build.gradle)
+
+Tester1 can copy the above code into his `ProjectA/build.gradle`. He can get started with it.
+
+Tester1 wants to run the following command on his machine in the terminal window.
 
 ```
 $ cd <ProjectA>
 $ .\gradlew importTestObjectsFromBase
 ```
 
-Tester2 also runs a command in the Terminal:
+This will let Gradle to execute the `importTestObjectFromBase` task. Please read the [source code](https://github.com/kazurayam/ImportingTestObjectsAcrossKatalonProjectsUsingGradle/blob/master/ProjectA/build.gradle) and understand what it does.
 
-```
-$ cd <ProjectB>
-$ .\gradlew importTestObjectsFromBase
-```
+Briefly, I would describe what it does.
 
-The `importTestObjectsFromBase` will copy the selected TestObjects into the local project's `Object Repository` folder.
+1. The task identifies the path of the folder as source in the Base project.
+2. The task identifies the path of the folder as target in the ProjectA.
+3. The task removes the target folder, so that the target is cleared once before imporing.
+4. The task copies the files as TestObject from the source into the target
+5. The task selects files to copy by the specified pattern of file/directory names
 
-Before executing the command, Test1 will see in the ProjectA:
-
-
-
-- [docs](https://kazurayam.github.io/ImportingTestObjectsAcrossKatalonProjectsUsingGradle/)
