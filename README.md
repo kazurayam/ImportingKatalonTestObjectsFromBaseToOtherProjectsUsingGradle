@@ -19,7 +19,7 @@ I would enumerate what's required, as follows:
 5. In the ProjectA, Tester1 develops a set of TestObjects, which is local to the ProjectA. And at the same time, Tester1 wants to use some TestObjects developed by Guru in the Base project.
 6. In the ProjectB, Tester2 develops a set of TestObjects, which is local to the ProjectB. And at the same time, Tester2 wants to use some TestObjects developed by Guru in the Base project.
 7. Test1 and Test2 do not need all the TestObjects developt by Guru in the Base project. Test1 wants to select some of the TestObjects out of the Base project.
-8. Test1 and Test2 wants to keep their local project the ProjectA and the ProjectB in sync with the Base project as much as possible.
+8. Test1 and Test2 wants to keep their local project the ProjectA and the ProjectB in sync with the Base project as closely as possible, but they do not require realtime synchronization.
 9. Test1 and Test2 wants to synchronize their local projects by an easy operation: by a single command operation. They do not like a long sequence of copy&past operations on Windows Explorer GUI.
 
 ## How the Katalon projects will look?
