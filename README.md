@@ -22,6 +22,24 @@ I would enumerate what's required, as follows:
 8. Test1 and Test2 wants to keep their local project the ProjectA and the ProjectB in sync with the Base project as much as possible.
 9. Test1 and Test2 wants to synchronize their local projects by an easy operation: by a single command operation. They do not like a long sequence of copy&past operations on Windows Explorer GUI.
 
+## What I want to see in the end
+
+Guru has developed the Base project. In the Base project's "Object Repository" folder, I can find a subfolder named "Page_CURA Healthcare Service" with a lot of TestObjects.
+
+![01](https://kazurayam.github.io/ImportingTestObjectsAcrossKatalonProjectsUsingGradle/images/01BaseProject.png)
+
+Tester1 has developed the ProjectA. In the ProjectA's "Object Repository" folder, I can find only a subfolder named "Page_DuckDuckGo Privacy, simplified". I do not see the "Page_CURA..." TestObjects yet.
+
+![02](https://kazurayam.github.io/ImportingTestObjectsAcrossKatalonProjectsUsingGradle/images/02ProjectA_before_import.png)
+
+Now, let me assume that Tester1 performs a magic here!!!
+
+After the magic, I can find 2 subfolers.
+
+![03](https://kazurayam.github.io/ImportingTestObjectsAcrossKatalonProjectsUsingGradle/images/03ProjectA_after_import.png)
+
+The "Page_CURA Healthcare Service" and its componet TestObjects have been imported from the Base project into the ProjectA. Tester1 is now able to use the TestObjects that Guru had developed in the Base project. This is what I wanted achieve.
+
 ## Solution
 
 I would use [Gradle](https://gradle.org/) build tool. In the ProjectA and ProjectB, I will create `build.gradle` file which implements a custom task `importTestObjectsFromBase`. And Tester1 runs a command in the Terminal:
