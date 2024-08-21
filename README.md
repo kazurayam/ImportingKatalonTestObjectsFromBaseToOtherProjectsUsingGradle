@@ -22,15 +22,20 @@ I would enumerate what's required, as follows:
 8. Test1 and Test2 wants to keep their local project the ProjectA and the ProjectB in sync with the Base project as much as possible.
 9. Test1 and Test2 wants to synchronize their local projects by an easy operation: by a single command operation. They do not like a long sequence of copy&past operations on Windows Explorer GUI.
 
-## What I want to see in the end
+## How the Katalon projects will look?
 
+### The Base project
 Guru has developed the Base project. In the Base project's "Object Repository" folder, I can find a subfolder named "Page_CURA Healthcare Service" with a lot of TestObjects.
 
 ![01](https://kazurayam.github.io/ImportingTestObjectsAcrossKatalonProjectsUsingGradle/images/01BaseProject.png)
 
+### The ProjectA before importing
+
 Tester1 has developed the ProjectA. In the ProjectA's "Object Repository" folder, I can find only a subfolder named "Page_DuckDuckGo Privacy, simplified". I do not see the "Page_CURA..." TestObjects yet.
 
 ![02](https://kazurayam.github.io/ImportingTestObjectsAcrossKatalonProjectsUsingGradle/images/02ProjectA_before_import.png)
+
+### The ProjectA after importing
 
 Now, let me assume that Tester1 performs a magic here!!!
 
