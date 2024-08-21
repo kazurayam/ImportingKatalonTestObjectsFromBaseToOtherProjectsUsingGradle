@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>label_Apply for hospital readmission</name>
+   <tag></tag>
+   <elementGuidId>dcbcd8a9-7ed3-4066-acdb-c8774e7e7e6c</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//section[@id='appointment']/div/div/form/div[2]/div/label</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>label.checkbox-inline</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>label</value>
+      <webElementGuid>e0cb69e3-2867-4141-a946-c2a8227e2ccc</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>for</name>
+      <type>Main</type>
+      <value>chk_hospotal_readmission</value>
+      <webElementGuid>6246d854-09bd-461b-b707-318c79107b72</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>checkbox-inline</value>
+      <webElementGuid>cd37e619-8a3b-4b0a-9f07-7853bc2dbf52</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+                             Apply for hospital readmission
+                        </value>
+      <webElementGuid>c7469c52-c98c-4634-9574-1198280ab52e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;appointment&quot;)/div[@class=&quot;container&quot;]/div[@class=&quot;row&quot;]/form[@class=&quot;form-horizontal&quot;]/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-offset-5 col-sm-4&quot;]/label[@class=&quot;checkbox-inline&quot;]</value>
+      <webElementGuid>5ab7cc4f-0c0b-4e10-8efa-a1a8201be9d6</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//section[@id='appointment']/div/div/form/div[2]/div/label</value>
+      <webElementGuid>19c3cdd0-6b15-4792-9949-d949e79fc067</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/label</value>
+      <webElementGuid>680abf5a-67f2-43e4-8c3f-becb379a7537</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//label[(text() = '
+                             Apply for hospital readmission
+                        ' or . = '
+                             Apply for hospital readmission
+                        ')]</value>
+      <webElementGuid>2cffc91c-b76b-4f2e-82d0-87dc797d00be</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

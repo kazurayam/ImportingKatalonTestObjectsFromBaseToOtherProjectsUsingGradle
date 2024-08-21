@@ -1,0 +1,22 @@
+.gradle
+
+bin
+
+Reports
+
+Libs
+
+output
+
+!output/.gitkeep
+build
+
+.classpath
+
+.project
+
+.cache/
+
+"Object Repository/duckduckgo/"
+"Object Repository/google"
+
