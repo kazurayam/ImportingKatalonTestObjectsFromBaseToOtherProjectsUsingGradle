@@ -1,6 +1,6 @@
 ext {
   USER_HOME="${System.getProperty('user.home')}"
-  BASE_PROJECT_SUBPATH='katalon-workspace/MultipleKatalonProjectsLinkedByGradle/BaseProject'
+  BASE_PROJECT_SUBPATH='katalon-workspace/ImportingTestObjectsAcrossKatalonProjectsUsingGradle/BaseProject'
 }
 
 tasks.register('importTestObjectsFromBase') {
@@ -8,15 +8,15 @@ tasks.register('importTestObjectsFromBase') {
     assert file("$USER_HOME/$BASE_PROJECT_SUBPATH").exists()
   }
   doFirst {
-    delete projectDir.toPath().resolve('Object Repository/duckduckgo/')
+    delete projectDir.toPath().resolve('Object Repository/Page_CURA Healthcare Service')
   }
   doLast {
     println "importing TestObjects (*.rs files)\nfrom\t$USER_HOME/$BASE_PROJECT_SUBPATH/Object Repository/\ninto\t${projectDir.toPath().resolve('Object Repository')}"
     copy {
-      from("$USER_HOME/$BASE_PROJECT_SUBPATH/Object Repository/duckduckgo/") {
+      from("$USER_HOME/$BASE_PROJECT_SUBPATH/Object Repository/Page_CURA Healthcare Service") {
         include '**/*.rs'
       }
-      into projectDir.toPath().resolve('Object Repository/duckduckgo/')
+      into projectDir.toPath().resolve('Object Repository/Page_CURA Healthcare Service')
     }
   }
 }
