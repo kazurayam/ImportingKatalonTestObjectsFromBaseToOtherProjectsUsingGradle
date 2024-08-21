@@ -2,7 +2,7 @@
 
 ## Background
 
-koushik.kannan posted a question to Katalon User forum, with title [Is there a way to override findTestObject method](https://forum.katalon.com/t/is-there-a-way-to-override-findtestobject-method/142370). His question inspired me. I played on Katalon Studio and I have created a [GitHub repository](https://github.com/kazurayam/ImportingTestObjectsAcrossKatalonProjectsUsingGradle) where 2 Katalon projects are . I would explain here what I made.
+koushik.kannan posted a question to Katalon User forum, with title [Is there a way to override findTestObject method](https://forum.katalon.com/t/is-there-a-way-to-override-findtestobject-method/142370). His question inspired me. I played on Katalon Studio and I have created a [GitHub repository](https://github.com/kazurayam/ImportingTestObjectsAcrossKatalonProjectsUsingGradle) where 2 Katalon projects are linked together using Gradle. I would explain here what I made.
 
 ## Problem to solve
 
