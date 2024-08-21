@@ -121,3 +121,6 @@ Briefly, I would describe what it does.
 4. The task copies the files as TestObject from the source into the target
 5. The task selects files to copy by the specified pattern of file/directory names
 
+## How to apply this method to your project
+
+You need to edit the [`build.gradle`](https://github.com/kazurayam/ImportingTestObjectsAcrossKatalonProjectsUsingGradle/blob/master/ProjectA/build.gradle) so that it matches to your projects file/folder paths names. Also you should specify appropriate patterns to select the TestObjects to copy from the base into the working projects.gi
