@@ -1,0 +1,42 @@
+@startuml
+
+title importing TestObjects from Base project into Working projects using Gradle
+actor Guru as guru
+participant "Base project" as prjBase
+
+actor Tester1 as tester1
+
+participant "ProjectA" as prjA
+control "build.gradle\nin Project A" as buildA #lightGreen
+
+actor Tester2 as tester2
+participant "ProjectB" as prjB
+control "build.gradle\nin Project B" as buildB #orange
+
+guru -> prjBase : develops reusable TestObjects
+hnote over prjBase
+reusable TestObjects
+end hnote
+
+tester1 -> prjA : develops
+hnote over prjA
+TestObjects local to A
+end hnote
+group $ cd ProjectA\n$ gradle importTestObjectsFromBase
+prjBase -> buildA : select TestObjects by name
+prjA <- buildA : import
+end
+
+tester2 -> prjB : develops
+hnote over prjB
+TestObjects local to B
+end hnote
+group $ cd ProjectB\n$ gradle importTestObjectsFromBase
+prjBase -> buildB : select TestObjects by name
+buildB -> prjB : import
+end
+
+tester1 -> prjA : runs
+tester2 -> prjB : runs
+
+@enduml
