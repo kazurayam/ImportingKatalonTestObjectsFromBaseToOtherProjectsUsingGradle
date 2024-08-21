@@ -123,4 +123,4 @@ Briefly, I would describe what it does.
 
 ## How to apply this method to your project
 
-You need to edit the [`build.gradle`](https://github.com/kazurayam/ImportingTestObjectsAcrossKatalonProjectsUsingGradle/blob/master/ProjectA/build.gradle) so that it matches to your projects file/folder paths names. Also you should specify appropriate patterns to select the TestObjects to copy from the base into the working projects.gi
+You need to edit the [`build.gradle`](https://github.com/kazurayam/ImportingTestObjectsAcrossKatalonProjectsUsingGradle/blob/master/ProjectA/build.gradle) so that it matches to your projects file/folder paths names. Also you should specify appropriate patterns to select the TestObjects to copy from the base into the working projects.
