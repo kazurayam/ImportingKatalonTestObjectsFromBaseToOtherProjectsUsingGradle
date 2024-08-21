@@ -11,4 +11,4 @@ His question inspired me. I have created a [GitHub repository](https://github.co
 ![sequence]()
 
 
-- [docs](https://io.github.kazurayam/ImportingKatalonTestObjectsFromBaseToOtherProjectsUsingGradle/)
+- [docs](https://kazurayam.github.io/ImportingKatalonTestObjectsFromBaseToOtherProjectsUsingGradle/)
