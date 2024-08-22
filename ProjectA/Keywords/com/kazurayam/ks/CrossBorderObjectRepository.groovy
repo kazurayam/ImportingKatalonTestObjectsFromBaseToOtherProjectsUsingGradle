@@ -1,31 +1,15 @@
 package com.kazurayam.ks
 
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
-import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
-import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
+
+import java.nio.file.Files
+import java.text.MessageFormat
 
 import com.kms.katalon.core.annotation.Keyword
-import com.kms.katalon.core.checkpoint.Checkpoint
-import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
-import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
-import com.kms.katalon.core.model.FailureHandling
-import com.kms.katalon.core.testcase.TestCase
-import com.kms.katalon.core.testdata.TestData
-import com.kms.katalon.core.testobject.TestObject
-import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
-import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-
-import internal.GlobalVariable
-import com.kms.katalon.core.testobject.ObjectRepository
-import java.nio.file.Files
-import java.nio.file.Path
-import java.nio.file.Paths
-import com.kms.katalon.core.logging.KeywordLogger
 import com.kms.katalon.core.constants.StringConstants
-import java.text.MessageFormat
+import com.kms.katalon.core.logging.KeywordLogger
+import com.kms.katalon.core.testobject.ObjectRepository
+import com.kms.katalon.core.testobject.TestObject
 
 public class CrossBorderObjectRepository {
 
@@ -47,12 +31,15 @@ public class CrossBorderObjectRepository {
 	}
 
 	@Keyword
-	public static TestObject findTestObject(File alternativeProjectDir) {
-		return findTestObject(alternativeProjectDir, new HashMap<String, Object>())
+	public static TestObject findTestObject(File alternativeProjectDir, 
+											String testObjectRelativeId) {
+		return findTestObject(alternativeProjectDir, testObjectRelativeId, new HashMap<String, Object>())
 	}
 
 	@Keyword
-	public static TestObject findTestObject(File alternativeProjectDir, String testObjectRelativeId, Map<String, Object> variables) {
+	public static TestObject findTestObject(File alternativeProjectDir, 
+											String testObjectRelativeId, 
+											Map<String, Object> variables) {
 		if (!Files.exists(alternativeProjectDir.toPath())) {
 			logger.logWarning(alternativeProjectDir.toString() + " does not exist")
 			return null
@@ -76,6 +63,6 @@ public class CrossBorderObjectRepository {
 					MessageFormat.format(StringConstants.TO_LOG_WARNING_TEST_OBJ_DOES_NOT_EXIST, testObjectId));
 			return null;
 		}
-		return ObjectRepository.readTestObjectFile(testObjectId, objectFile, alternativeProjectDir, variables);
+		return ObjectRepository.readTestObjectFile(testObjectId, objectFile, alternativeProjectDir.toString(), variables);
 	}
 }
